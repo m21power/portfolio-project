@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-24 sm:pt-8"
     >
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900/20 pt-20"></div>
@@ -109,9 +109,9 @@ const Hero: React.FC = () => {
         ></div>
       </div>
 
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto pt-20">
+      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto pt-8">
         {/* Profile Image */}
-        <div className="mb-8 mt-8 animate-fade-in">
+        <div className="mb-8 mt-4 animate-fade-in">
           <img
             src="https://res.cloudinary.com/dl6vahv6t/image/upload/v1753348821/mesay_sw5s27.jpg"
             alt="Mesay Lemma"
