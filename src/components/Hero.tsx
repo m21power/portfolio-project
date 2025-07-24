@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import { Github, Linkedin, Code, ChevronDown } from 'lucide-react';
-import { socials } from '../data/portfolio';
+import React, { useEffect, useState } from "react";
+import { Github, Linkedin, Code, ChevronDown } from "lucide-react";
+import { socials } from "../data/portfolio";
 
 const Hero: React.FC = () => {
-  const [displayedText, setDisplayedText] = useState('');
+  const [displayedText, setDisplayedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  
+
   const titles = [
-    'Backend Developer',
-    'Mobile Developer',
-    'Full Stack Engineer',
-    'Problem Solver'
+    "Backend Developer",
+    "Mobile Developer",
+    "Full Stack Engineer",
+    "Problem Solver",
   ];
 
   useEffect(() => {
@@ -23,17 +23,15 @@ const Hero: React.FC = () => {
       return;
     }
 
-    if (isDeleting && displayedText === '') {
+    if (isDeleting && displayedText === "") {
       setIsDeleting(false);
       setCurrentIndex((prev) => (prev + 1) % titles.length);
       return;
     }
 
     const timeout = setTimeout(() => {
-      setDisplayedText(prev => 
-        isDeleting 
-          ? prev.slice(0, -1)
-          : currentTitle.slice(0, prev.length + 1)
+      setDisplayedText((prev) =>
+        isDeleting ? prev.slice(0, -1) : currentTitle.slice(0, prev.length + 1)
       );
     }, speed);
 
@@ -42,11 +40,11 @@ const Hero: React.FC = () => {
 
   const getIcon = (iconName: string) => {
     switch (iconName) {
-      case 'Github':
+      case "Github":
         return <Github className="w-6 h-6" />;
-      case 'Linkedin':
+      case "Linkedin":
         return <Linkedin className="w-6 h-6" />;
-      case 'Code':
+      case "Code":
         return <Code className="w-6 h-6" />;
       default:
         return <Code className="w-6 h-6" />;
@@ -54,25 +52,37 @@ const Hero: React.FC = () => {
   };
 
   const scrollToAbout = () => {
-    const element = document.getElementById('about');
+    const element = document.getElementById("about");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+    >
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900/20 pt-20"></div>
-      
+
       {/* Professional Animated Background */}
       <div className="absolute inset-0">
         {/* Geometric shapes with subtle animation */}
         <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500/5 dark:bg-cyan-400/5 rounded-full animate-pulse-slow"></div>
-        <div className="absolute top-40 right-20 w-24 h-24 bg-cyan-500/5 dark:bg-blue-400/5 rounded-full animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-40 left-20 w-20 h-20 bg-blue-600/5 dark:bg-cyan-500/5 rounded-full animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-20 right-10 w-28 h-28 bg-cyan-600/5 dark:bg-blue-500/5 rounded-full animate-pulse-slow" style={{ animationDelay: '0.5s' }}></div>
-        
+        <div
+          className="absolute top-40 right-20 w-24 h-24 bg-cyan-500/5 dark:bg-blue-400/5 rounded-full animate-pulse-slow"
+          style={{ animationDelay: "1s" }}
+        ></div>
+        <div
+          className="absolute bottom-40 left-20 w-20 h-20 bg-blue-600/5 dark:bg-cyan-500/5 rounded-full animate-pulse-slow"
+          style={{ animationDelay: "2s" }}
+        ></div>
+        <div
+          className="absolute bottom-20 right-10 w-28 h-28 bg-cyan-600/5 dark:bg-blue-500/5 rounded-full animate-pulse-slow"
+          style={{ animationDelay: "0.5s" }}
+        ></div>
+
         {/* Subtle grid pattern */}
         <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05]">
           <div
@@ -82,22 +92,28 @@ const Hero: React.FC = () => {
                 linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)
               `,
-              backgroundSize: '50px 50px',
+              backgroundSize: "50px 50px",
             }}
           />
         </div>
-        
+
         {/* Floating particles */}
         <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-400/20 dark:bg-cyan-400/20 rounded-full animate-bounce-slow"></div>
-        <div className="absolute top-3/4 right-1/3 w-1.5 h-1.5 bg-cyan-400/20 dark:bg-blue-400/20 rounded-full animate-bounce-slow" style={{ animationDelay: '1.5s' }}></div>
-        <div className="absolute top-1/2 right-1/4 w-1 h-1 bg-blue-500/20 dark:bg-cyan-500/20 rounded-full animate-bounce-slow" style={{ animationDelay: '3s' }}></div>
+        <div
+          className="absolute top-3/4 right-1/3 w-1.5 h-1.5 bg-cyan-400/20 dark:bg-blue-400/20 rounded-full animate-bounce-slow"
+          style={{ animationDelay: "1.5s" }}
+        ></div>
+        <div
+          className="absolute top-1/2 right-1/4 w-1 h-1 bg-blue-500/20 dark:bg-cyan-500/20 rounded-full animate-bounce-slow"
+          style={{ animationDelay: "3s" }}
+        ></div>
       </div>
 
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto pt-20">
         {/* Profile Image */}
         <div className="mb-8 mt-8 animate-fade-in">
           <img
-            src="https://res.cloudinary.com/dl6vahv6t/image/upload/v1752582210/IMG_20240929_105737_270_xwzh4q.jpg"
+            src="https://res.cloudinary.com/dl6vahv6t/image/upload/v1753348821/mesay_sw5s27.jpg"
             alt="Mesay Lemma"
             className="w-32 h-32 sm:w-40 sm:h-40 rounded-full mx-auto object-cover border-4 border-white dark:border-gray-700 shadow-xl hover:scale-105 transition-transform duration-300"
           />
@@ -106,14 +122,14 @@ const Hero: React.FC = () => {
         {/* Main Content */}
         <div className="space-y-6 animate-slide-up">
           <h1 className="text-4xl sm:text-6xl font-bold text-gray-900 dark:text-white">
-            Hi, I'm{' '}
+            Hi, I'm{" "}
             <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
               Mesay Lemma
             </span>
           </h1>
-          
+
           <div className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 h-8">
-            I'm a{' '}
+            I'm a{" "}
             <span className="text-blue-600 dark:text-cyan-400 font-semibold">
               {displayedText}
               <span className="animate-pulse">|</span>
@@ -121,9 +137,9 @@ const Hero: React.FC = () => {
           </div>
 
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            Computer Science student specializing in backend development with Golang and 
-            mobile development with Flutter. Passionate about building scalable solutions 
-            and solving complex problems.
+            Computer Science student specializing in backend development with
+            Golang and mobile development with Flutter. Passionate about
+            building scalable solutions and solving complex problems.
           </p>
 
           {/* Social Links */}
@@ -168,19 +184,31 @@ const Hero: React.FC = () => {
 
       <style jsx>{`
         @keyframes fade-in {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
-        
+
         @keyframes slide-up {
-          from { opacity: 0; transform: translateY(30px); }
-          to { opacity: 1; transform: translateY(0); }
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
-        
+
         .animate-fade-in {
           animation: fade-in 1s ease-out;
         }
-        
+
         .animate-slide-up {
           animation: slide-up 1s ease-out 0.3s both;
         }
