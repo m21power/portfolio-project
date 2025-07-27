@@ -88,11 +88,11 @@ const Footer: React.FC = () => {
         {/* Divider */}
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex items-center space-x-2 text-gray-400">
+            {/* <div className="flex items-center space-x-2 text-gray-400">
               <span>Made with</span>
               <Heart className="w-4 h-4 text-red-500" />
               <span>using React, TypeScript & Tailwind CSS</span>
-            </div>
+            </div> */}
 
             <div className="text-gray-400 text-sm">
               © {new Date().getFullYear()} Mesay Lemma. All rights reserved.
