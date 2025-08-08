@@ -1,6 +1,17 @@
-import React from 'react';
-import { Server, Smartphone, Car, CaseSensitive as University, School, GraduationCap, Trophy, Code, Github, Linkedin } from 'lucide-react';
-import { ExperienceItem, ProjectItem, EduBgItem, SocialItem } from '../types';
+import React from "react";
+import {
+  Server,
+  Smartphone,
+  Car,
+  CaseSensitive as University,
+  School,
+  GraduationCap,
+  Trophy,
+  Code,
+  Github,
+  Linkedin,
+} from "lucide-react";
+import { ExperienceItem, ProjectItem, EduBgItem, SocialItem } from "../types";
 
 export const experience: ExperienceItem[] = [
   {
@@ -49,11 +60,26 @@ export const experience: ExperienceItem[] = [
       "Google Maps API",
     ],
     url: null,
-    thumbnail: "https://res.cloudinary.com/dl6vahv6t/image/upload/v1752581130/golden_ride_dn4abj.png",
+    thumbnail:
+      "https://res.cloudinary.com/dl6vahv6t/image/upload/v1752581130/golden_ride_dn4abj.png",
   },
 ];
-
 export const projects: ProjectItem[] = [
+  {
+    id: 8,
+    title: "Kit – Version Control System (Git Alternative)",
+    desc: "A Git-like version control system built from scratch in Go with custom hashing, compression, and a browser-based playground.",
+    details: [
+      "Implemented core Git features: init, add, commit, log, branch, checkout, restore, and reset",
+      "Designed efficient object storage using SHA-1 hashing and zlib compression",
+      "Created a web playground for testing Kit without local installation",
+    ],
+    tech: ["Golang", "SHA-1", "zlib", "REST API"],
+    url: "https://github.com/m21power/kit",
+    website: "https://kit-playground.vercel.app/",
+    thumbnail:
+      "https://res.cloudinary.com/dl6vahv6t/image/upload/v1754656811/Screenshot_from_2025-08-08_15-07-18_broo76.png",
+  },
   {
     id: 4,
     title: "Near Me – Campus Social Network",
@@ -65,7 +91,8 @@ export const projects: ProjectItem[] = [
     ],
     tech: ["Flutter", "Golang", "Firestore", "Firebase"],
     url: "https://github.com/m21power/near-me",
-    thumbnail: "https://res.cloudinary.com/dl6vahv6t/image/upload/v1752581204/438113441-e5a00585-cd2e-4042-b778-b38a38df1c4e.png_dob1wy.png",
+    thumbnail:
+      "https://res.cloudinary.com/dl6vahv6t/image/upload/v1752581204/438113441-e5a00585-cd2e-4042-b778-b38a38df1c4e.png_dob1wy.png",
   },
   {
     id: 5,
@@ -78,7 +105,8 @@ export const projects: ProjectItem[] = [
     ],
     tech: ["Flutter", "UI/UX", "WebSocket", "Firebase"],
     url: "https://github.com/m21power/shekla",
-    thumbnail: "https://res.cloudinary.com/dl6vahv6t/image/upload/v1752580651/shekla_l925qh.jpg",
+    thumbnail:
+      "https://res.cloudinary.com/dl6vahv6t/image/upload/v1752580651/shekla_l925qh.jpg",
   },
   {
     id: 6,

@@ -1,6 +1,6 @@
-import React from 'react';
-import { ExternalLink, Github } from 'lucide-react';
-import { projects } from '../data/portfolio';
+import React from "react";
+import { ExternalLink, Github } from "lucide-react";
+import { projects } from "../data/portfolio";
 
 const Projects: React.FC = () => {
   return (
@@ -33,12 +33,12 @@ const Projects: React.FC = () => {
                 ) : (
                   <div className="w-full h-full bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center">
                     <div className="text-4xl font-bold text-white opacity-50">
-                      {project.title.split(' ')[0]}
+                      {project.title.split(" ")[0]}
                     </div>
                   </div>
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                
+
                 {/* Project Links Overlay */}
                 <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <a
@@ -65,7 +65,7 @@ const Projects: React.FC = () => {
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors duration-300">
                   {project.title}
                 </h3>
-                
+
                 <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
                   {project.desc}
                 </p>
@@ -98,15 +98,27 @@ const Projects: React.FC = () => {
                 </div>
 
                 {/* Project Link */}
-                <a
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-blue-600 dark:text-cyan-400 hover:text-blue-700 dark:hover:text-cyan-300 font-medium transition-colors duration-200"
-                >
-                  View on GitHub
-                  <ExternalLink className="w-4 h-4 ml-2" />
-                </a>
+                {project.website ? (
+                  <a
+                    href={project.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-blue-600 dark:text-cyan-400 hover:text-blue-700 dark:hover:text-cyan-300 font-medium transition-colors duration-200"
+                  >
+                    View Live Demo(PlayGround)
+                    <ExternalLink className="w-4 h-4 ml-2" />
+                  </a>
+                ) : (
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-blue-600 dark:text-cyan-400 hover:text-blue-700 dark:hover:text-cyan-300 font-medium transition-colors duration-200"
+                  >
+                    View on GitHub
+                    <ExternalLink className="w-4 h-4 ml-2" />
+                  </a>
+                )}
               </div>
             </div>
           ))}
@@ -118,7 +130,7 @@ const Projects: React.FC = () => {
             href="https://github.com/m21power"
             target="_blank"
             rel="noopener noreferrer"
-           className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full font-semibold hover:from-blue-700 hover:to-cyan-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full font-semibold hover:from-blue-700 hover:to-cyan-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             View All Projects
             <Github className="w-5 h-5 ml-2" />

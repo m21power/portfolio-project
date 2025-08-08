@@ -16,6 +16,7 @@ export interface ProjectItem {
   details: string[];
   tech: string[];
   url: string;
+  website?: string;
   thumbnail: string | null;
 }
 
