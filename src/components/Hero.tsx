@@ -113,7 +113,7 @@ const Hero: React.FC = () => {
         {/* Profile Image */}
         <div className="mb-8 mt-4 animate-fade-in">
           <img
-            src="https://res.cloudinary.com/dl6vahv6t/image/upload/v1753348821/mesay_sw5s27.jpg"
+            src="https://res.cloudinary.com/dl6vahv6t/image/upload/v1766081204/photo_2025-11-15_10-27-13_wbsaxp.jpg"
             alt="Mesay Lemma"
             className="w-32 h-32 sm:w-40 sm:h-40 rounded-full mx-auto object-cover border-4 border-white dark:border-gray-700 shadow-xl hover:scale-105 transition-transform duration-300"
           />

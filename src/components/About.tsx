@@ -59,7 +59,7 @@ const About: React.FC = () => {
           <div className="relative">
             <div className="relative group">
               <img
-                src="https://res.cloudinary.com/dl6vahv6t/image/upload/v1753348821/mesay_sw5s27.jpg"
+                src="https://res.cloudinary.com/dl6vahv6t/image/upload/v1766081204/photo_2025-11-15_10-27-13_wbsaxp.jpg"
                 alt="Mesay Lemma"
                 className="w-full max-w-md mx-auto rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-300 transform group-hover:scale-105"
               />
