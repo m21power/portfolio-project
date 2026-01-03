@@ -22,7 +22,8 @@ const About: React.FC = () => {
               , a Computer Science student at Addis Ababa University,
               specializing in{" "}
               <span className="text-blue-600 dark:text-cyan-400 font-semibold">
-                backend development with Golang
+                Website development with React and TypeScript, Backend
+                development with Golang
               </span>{" "}
               and{" "}
               <span className="text-blue-600 dark:text-cyan-400 font-semibold">

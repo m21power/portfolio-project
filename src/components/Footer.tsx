@@ -30,9 +30,9 @@ const Footer: React.FC = () => {
               Mesay Lemma
             </div>
             <p className="text-gray-400 leading-relaxed">
-              Backend Developer & Mobile Developer specializing in Golang,
-              Flutter, and scalable system architecture. Always excited about
-              new challenges and opportunities to learn.
+              Software Engineer specializing in Golang, Flutter, and scalable
+              system architecture. Always excited about new challenges and
+              opportunities to learn.
             </p>
           </div>
 

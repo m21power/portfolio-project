@@ -146,6 +146,10 @@ Time: ${new Date().toLocaleString()}
                 <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-blue-600 dark:bg-cyan-400 rounded-full mr-3"></span>
+                    Website Development (React, TypeScript)
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-blue-600 dark:bg-cyan-400 rounded-full mr-3"></span>
                     Backend Development (Golang, Java)
                   </li>
                   <li className="flex items-center">
