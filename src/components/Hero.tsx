@@ -8,6 +8,7 @@ const Hero: React.FC = () => {
   const [isDeleting, setIsDeleting] = useState(false);
 
   const titles = [
+    "Website Developer",
     "Backend Developer",
     "Mobile Developer",
     "Full Stack Engineer",
